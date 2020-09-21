@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Calculator</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+  <ion-label>Volume(in mL) </ion-label>
+  <ion-input type="number" [(ngModel)]="mLValue"></ion-input>
+
+</ion-item> 
+
+
+  <ion-item>
+  <ion-label>Cost in Php</ion-label>
+  <ion-input type="number" [(ngModel)]="cost1Value"></ion-input>
+
+</ion-item> 
+
+
+  <ion-item>
+  <ion-label>Volume(in L) </ion-label>
+  <ion-input type="number" [(ngModel)]="lValue"></ion-input>
+
+</ion-item> 
+
+  <ion-item>
+  <ion-label>Cost in Php</ion-label>
+  <ion-input type="number" [(ngModel)]="cost2Value"></ion-input>
+
+</ion-item> 
+
+<button ion-button color="Primary" (click)=" compute () ">Compute</button>
+
+<ion-item *ngIf="unitA"> 
+  <h3> Unit Price A in Liter: Php {{unitA}} </h3>
+</ion-item>
+
+<ion-item *ngIf="unitB"> 
+  <h3> Unit Price B in Liter: Php {{unitB}} </h3>
+</ion-item>
+
+<ion-item *ngIf="saveValue"> 
+  <h3> You save: Php {{saveValue}} </h3>
+</ion-item>
+
+</ion-content>
